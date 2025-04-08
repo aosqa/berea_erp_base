@@ -1,14 +1,20 @@
 /** @odoo-module **/
-import { Component, xml, useState, onMounted , onWillStart} from "@odoo/owl";
 import {WebClient} from "@web/webclient/webclient";
 import { SideBar } from "@berekasystems_theme/webclient/sidebar/sidebar";
 import { patch } from '@web/core/utils/patch';
+import { useService } from "@web/core/utils/hooks";
 
-patch(WebClient,{
+patch(WebClient.prototype,{
+    setup() {
+        super.setup();
+        const titleService = useService("title");
+        titleService.setParts({ zopenerp: "" });
+    },
     
-    components:{
-        ...WebClient.components,
-        SideBar
-
-    }
 })
+
+WebClient.components={
+    ...WebClient.components,
+    SideBar
+
+}

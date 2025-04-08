@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+ <template id="mail_notification_layout" inherit_id="mail.mail_notification_layout">
+ <xpath expr="//div[@style='color: #555555; font-size:11px;']" position="replace">
+ <div style="color: #555555; font-size:11px;">
+    Powered by <a target="_blank" href="https://www.berekasystems.et"
+                  t-att-style="'color: ' + (company.email_secondary_color or '#875A7B') + ';'">BerekaSystems</a>
+    <span id="mail_unfollow">
+        | <a href="/mail/unfollow" style="text-decoration:none; color:#555555;">Unfollow</a>
+    </span>
+</div>
+    
+ </xpath>
+ </template>
+
+ <template id="login_layout" inherit_id="web.login_layout">
+ <xpath expr="//div[@class='text-center small mt-4 pt-3 border-top']" position="replace">
+ <div>
+   Powered by <a target="_blank" href="https://www.berekasystems.et">BerekaSystems</a>
+</div>
+    
+ </xpath>
+ </template>
+
+
+ </odoo>

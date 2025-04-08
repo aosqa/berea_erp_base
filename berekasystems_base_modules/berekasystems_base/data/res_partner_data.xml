@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ========== Ethiopian Company (English) ========== -->
+        <record id="base.main_partner" model="res.partner">
+            <field name="name">Bereka Systems</field>
+            <field name="street">Bole Road, Ras Adaba Square</field>
+            <field name="city">Addis Ababa</field>
+            <field name="country_id" ref="base.et"/> <!-- Ethiopia -->
+            <field name="phone">+251935664245</field>
+            <field name="email">info@berekasystems.et</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/description/icon.png"/>
+
+        </record>
+
+        <record model="res.partner" id="base.partner_admin">
+            
+            <field name="email">abdulselam4246@gmail.com</field>
+                        <field name="image_1920" type="base64" file="berekasystems_base/static/imgs/abduselam.jpeg"/>
+
+        </record>
+            <record model="res.partner" id="base.partner_root">
+            <field name="name">BerekaBot</field>
+            <field name="email">berekabot@berekassystems.et</field>
+        </record>
+
+    </data>
+</odoo>

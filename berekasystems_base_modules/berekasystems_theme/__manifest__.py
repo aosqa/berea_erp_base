@@ -13,6 +13,10 @@
             ========================================
     """,
     "demo": [],
+    "data":[
+        "views/wbclient_title.xml"
+
+    ],
     "assets": {
         'web._assets_primary_variables': [
             ('prepend', 'berekasystems_theme/static/src/scss/primary_variables.scss'),
@@ -24,6 +28,7 @@
           'berekasystems_theme/static/src/webclient/webclient.xml',
             "berekasystems_theme/static/src/webclient/webclient.scss",
             "berekasystems_theme/static/src/webclient/sidebar/sidebar.scss",
+            "berekasystems_theme/static/src/user_menu/user_menu_items.js"
 
 
         ]

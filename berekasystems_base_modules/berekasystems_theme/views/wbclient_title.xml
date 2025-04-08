@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <template id="berekasystems_theme.weblayout" inherit_id="web.layout">
+        <xpath expr="//title" position="replace">
+            <title>
+                
+                <t t-set="clean_title" t-value="(title or '').replace('Odoo', '').replace('odoo', '')"/>
+                <t t-esc="clean_title or env.company.name"/>
+            </title>
+        </xpath>
+        <xpath expr="//link" position="replace">
+        
+        <link/>
+        </xpath>
+    </template>	
+    
+</odoo>

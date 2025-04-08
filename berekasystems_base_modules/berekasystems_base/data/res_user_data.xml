@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="base.user_admin" model="res.users">
+    <field name="name">Bereka Admin</field>
+    <field name="login">bereka</field>
+    <field name="password">bereka</field>
+    <!-- Other fields you want to update -->
+</record>
+
+
+
+        </data>
+        </odoo>
