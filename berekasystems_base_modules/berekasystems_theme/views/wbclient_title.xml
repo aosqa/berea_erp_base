@@ -10,8 +10,30 @@
         </xpath>
         <xpath expr="//link" position="replace">
         
-        <link/>
+        <link type="image/x-icon" rel="shortcut icon" t-att-href="'/berekasystems_theme/static/description/icon.png'"/>
         </xpath>
     </template>	
+
+
+    <template id="brand_promotion_message" inherit_id="web.brand_promotion_message">
+        <!-- Remove Odoo Logo -->
+        <xpath expr="//t[@t-set='odoo_logo']" position="replace">
+            <t t-set="odoo_logo">
+                <!-- Empty or custom content -->
+                <span>Bereka Systems</span>
+            </t>
+        </xpath>
+
+        <!-- Replace final message -->
+        <xpath expr="//t[@t-set='final_message']" position="replace">
+            <t t-set="final_message">Customized by %s</t>
+        </xpath>
+
+        <!-- Replace output line -->
+        <xpath expr="//t[@t-out]" position="replace">
+            <t t-out="final_message % (odoo_logo)"/>
+        </xpath>
+    </template>
+
     
 </odoo>

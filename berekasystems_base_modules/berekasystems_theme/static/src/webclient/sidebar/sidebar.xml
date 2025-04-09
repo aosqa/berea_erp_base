@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="berekasystems_theme.sidebar">
-        <div class="bereka-sidebar-container" t-if="!isMobile or !state.fullscreen">
+        <div class="bereka-sidebar-container" t-if="!isMobile and !state.fullscreen">
         <t t-log="'ybd gop',isMobile"/>
             <t t-set="apps" t-value="menuService.getApps()"/>
             <ul class="sidebar-menu">
