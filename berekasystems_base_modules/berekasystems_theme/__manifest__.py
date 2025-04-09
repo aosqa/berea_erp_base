@@ -14,7 +14,8 @@
     """,
     "demo": [],
     "data":[
-        "views/wbclient_title.xml"
+        "views/wbclient_title.xml",
+        "views/res_config_setting.xml"
 
     ],
     "assets": {
