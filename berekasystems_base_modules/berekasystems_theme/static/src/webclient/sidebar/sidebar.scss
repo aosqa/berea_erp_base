@@ -1,6 +1,6 @@
 .bereka-sidebar-container {
     height: 100%;
-    width: 220px; /* Slightly wider for better readability */
+    width: 160px; /* Slightly wider for better readability */
     overflow-y: auto;
     overflow-x: hidden;
     padding: 10px 0;
@@ -35,20 +35,16 @@
     color: #fff; /* White text on hover */
 }
 
-.menu-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background: #adb5bd; /* Default icon color */
-}
+
 
 .menu-text {
     flex: 1;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* Active menu item styling */

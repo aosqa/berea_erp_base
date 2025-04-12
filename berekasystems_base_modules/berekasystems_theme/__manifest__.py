@@ -29,7 +29,10 @@
           'berekasystems_theme/static/src/webclient/webclient.xml',
             "berekasystems_theme/static/src/webclient/webclient.scss",
             "berekasystems_theme/static/src/webclient/sidebar/sidebar.scss",
-            "berekasystems_theme/static/src/user_menu/user_menu_items.js"
+            "berekasystems_theme/static/src/user_menu/user_menu_items.js",
+            'berekasystems_theme/static/src/webclient/navbar.scss',
+            'berekasystems_theme/static/src/webclient/navbar.xml',
+
 
 
         ]

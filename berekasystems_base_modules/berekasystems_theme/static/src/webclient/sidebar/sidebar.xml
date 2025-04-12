@@ -2,16 +2,14 @@
 <templates xml:space="preserve">
     <t t-name="berekasystems_theme.sidebar">
         <div class="bereka-sidebar-container" t-if="!isMobile and !state.fullscreen">
-        <t t-log="'ybd gop',isMobile"/>
             <t t-set="apps" t-value="menuService.getApps()"/>
             <ul class="sidebar-menu">
                 <t t-foreach="apps" t-as="app" t-key="app.id">  
-                <t t-log="'bbbbbbbbbbbbbbbbbb',menuService.getCurrentApp() ,app "/>
                     <li t-att-class="'menu-item o_app' + (menuService.getCurrentApp() and menuService.getCurrentApp().id === app.id ? ' focus' : '')">
     <a t-att-href="getMenuItemHref(app)" class="menu-link" t-on-click.prevent="() => this.onMenuSelection(app)">
-        <span class="menu-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
+        <!-- <span class="menu-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
             <img t-att-src="getIconLink(app)" height="20" width="20" style="display: block;"/>
-        </span>
+        </span> -->
         <span 
             t-att-class="'menu-text' + (menuService.getCurrentApp() and menuService.getCurrentApp().id === app.id ? ' active' : '')" 
             t-esc="app.name"

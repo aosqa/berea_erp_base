@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Partner Categories -->
+        <record id="base.res_partner_category_0" model="res.partner.category">
+            <field name="name">Vendor</field>
+            <field name="color" eval="2"/>
+        </record>
+        <record id="base.res_partner_category_2" model="res.partner.category">
+            <field name="name">Prospects</field>
+            <field name="color" eval="3"/>
+        </record>
+        <record id="base.res_partner_category_3" model="res.partner.category">
+            <field name="name">Employees</field>
+            <field name="color" eval="4"/>
+        </record>
+        <record id="base.res_partner_category_8" model="res.partner.category">
+            <field name="name">Consulting Services</field>
+            <field name="color" eval="5"/>
+        </record>
+        <record id="base.res_partner_category_11" model="res.partner.category">
+            <field name="name">Services</field>
+            <field name="color" eval="7"/>
+        </record>
+        <record id="base.res_partner_category_12" model="res.partner.category">
+            <field name="name">Office Supplies</field>
+            <field name="parent_id" ref="base.res_partner_category_0"/>
+            <field name="color" eval="8"/>
+        </record>
+        <record id="base.res_partner_category_14" model="res.partner.category">
+            <field name="name">Desk Manufacturers</field>
+            <field name="parent_id" ref="base.res_partner_category_0"/>
+            <field name="color" eval="10"/>
+        </record>
+
+        <!-- Ethiopian Partner Records with Ethiopian Names -->
+        <record id="base.res_partner_1" model="res.partner">
+            <field name="name">Abebe Mekonnen</field>
+            <field eval="[Command.set([ref('base.res_partner_category_14'), ref('base.res_partner_category_12')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="street">Bole Rwanda Street</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">abebe@ethiowoodworks.et</field>
+            <field name="phone">+251911123456</field>
+            <field name="website">http://www.ethiowoodworks.et</field>
+            <field name="vat">ET12345672</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_2" model="res.partner">
+            <field name="name">Endris Mohammed</field>
+            <field eval="[Command.set([ref('base.res_partner_category_14')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="street">CMC Road</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">endris@decohabesha.et</field>
+            <field name="phone">+251922223344</field>
+            <field name="website">http://www.decohabesha.et</field>
+            <field name="vat">ET12345673</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_3" model="res.partner">
+            <field name="name">Alemu Kassahun</field>
+            <field eval="[Command.set([ref('base.res_partner_category_8'), ref('base.res_partner_category_14')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="street">Kazanchis, Enat Tower</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">alemu@geminiet.com</field>
+            <field name="phone">+251911334455</field>
+            <field name="website">http://www.geminiet.com</field>
+            <field name="vat">ET12345674</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_4" model="res.partner">
+            <field name="name">Mahlet Tadesse</field>
+            <field eval="[Command.set([ref('base.res_partner_category_14'), ref('base.res_partner_category_12')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="street">Gerji Mebrat Haile</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">mahlet@readymat.et</field>
+            <field name="phone">+251913456789</field>
+            <field name="website">http://www.readymat.et</field>
+            <field name="vat">ET12345675</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_10" model="res.partner">
+            <field name="name">Yohannes Getachew</field>
+            <field name="is_company">1</field>
+            <field name="street">Bole Atlas, Wollo Sefer</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">yohannes@jackson.et</field>
+            <field name="phone">+251911000888</field>
+            <field name="vat">ET12345676</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_12" model="res.partner">
+            <field name="name">Selamawit Bekele</field>
+            <field eval="[Command.set([ref('base.res_partner_category_11')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="street">Bole Medhanialem, Morning Star Mall</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">selam@azureinterior.et</field>
+            <field name="phone">+251912345678</field>
+            <field name="website">http://www.azureinterior.et</field>
+            <field name="vat">ET12345677</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+        <record id="base.res_partner_18" model="res.partner">
+            <field name="name">Temesgen Asfaw</field>
+            <field name="is_company">1</field>
+            <field name="street">Addis Ketema, Merkato</field>
+            <field name="city">Addis Ababa</field>
+            <field name="zip">1000</field>
+            <field name="country_id" ref="base.et"/>
+            <field name="email">temesgen@lumberinc.et</field>
+            <field name="phone">+251911987654</field>
+            <field name="website">http://www.lumberinc.et</field>
+            <field name="vat">ET12345678</field>
+            <field name="image_1920" type="base64" file="berekasystems_base/static/src/images/girl.jpg"/>
+        </record>
+
+    </data>
+</odoo>

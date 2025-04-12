@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+            <!--Employees-->
+            <record id="hr.work_contact_han" model="res.partner">
+                <field name="name">Mekdes Tesfaye</field>
+                <field name="email">mekdes.tesfaye80@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_han-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_han" model="hr.employee">
+                <field name="name">Mekdes Tesfaye</field>
+                <field name="department_id" ref="hr.dep_rd"/>
+                <field name="parent_id" ref="hr.employee_jve"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">(555)-912-1201</field>
+                <field name="work_contact_id" ref="hr.work_contact_han"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_han-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_jth" model="res.partner">
+                <field name="name">Fikirte Abebe</field>
+                <field name="email">fikirte.abebe23@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jth-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jth" model="hr.employee">
+                <field name="name">Fikirte Abebe</field>
+                <field name="department_id" ref="hr.dep_ps"/>
+                <field name="parent_id" ref="hr.employee_vad"/>
+                <field name="job_id" ref="hr.job_consultant"/>
+                <field name="job_title">Consultant</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4'), ref('hr.employee_category_5')])]"/>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">(555)-707-8451</field>
+                <field name="work_contact_id" ref="hr.work_contact_jth"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jth-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_niv" model="res.partner">
+                <field name="name">Muluwork Tesfaye</field>
+                <field name="email">muluwork.tesfaye49@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_niv-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_niv" model="hr.employee">
+                <field name="name">Muluwork Tesfaye</field>
+                <field name="department_id" ref="hr.dep_management"/>
+                <field name="parent_id" ref="hr.employee_qdp"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4')])]"/>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">(555)-719-4182</field>
+                <field name="work_contact_id" ref="hr.work_contact_niv"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_niv-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_stw" model="res.partner">
+                <field name="name">Tadesse Bekele</field>
+                <field name="email">tadesse.bekele@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_stw-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_stw" model="hr.employee">
+                <field name="name">Tadesse Bekele</field>
+                <field name="department_id" ref="hr.dep_rd"/>
+                <field name="parent_id" ref="hr.employee_qdp"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4')])]"/>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-775-6660</field>
+                <field name="work_contact_id" ref="hr.work_contact_stw"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_stw-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+
+            <record id="hr.work_contact_jod" model="res.partner">
+                <field name="name">Mulugeta Alemu</field>
+                <field name="email">mulugeta.alemu@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jod-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jod" model="hr.employee">
+                <field name="name">Mulugeta Alemu</field>
+                <field name="department_id" ref="hr.dep_sales"/>
+                <field name="parent_id" ref="hr.employee_ngh"/>
+                <field name="job_id" ref="hr.job_marketing"/>
+                <field name="job_title">Marketing and Community Manager</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-267-3735</field>
+                <field name="work_contact_id" ref="hr.work_contact_jod"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jod-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_jve" model="res.partner">
+                <field name="name">Abebe Tesfaye</field>
+                <field name="email">abebe.tesfaye@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jve-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jve" model="hr.employee">
+                <field name="name">Abebe Tesfaye</field>
+                <field name="department_id" ref="hr.dep_rd_ltp"/>
+                <field name="parent_id" ref="hr.employee_qdp"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-262-1607</field>
+                <field name="work_contact_id" ref="hr.work_contact_jve"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jve-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_fme" model="res.partner">
+                <field name="name">Tadesse Bekele</field>
+                <field name="email">tadesse.bekele@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_fme-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_fme" model="hr.employee">
+                <field name="name">Tadesse Bekele</field>
+                <field name="department_id" ref="hr.dep_rd"/>
+                <field name="parent_id" ref="hr.employee_al"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4')])]"/>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-505-5146</field>
+                <field name="work_contact_id" ref="hr.work_contact_fme"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_fme-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+
+            <record id="hr.work_contact_chs" model="res.partner">
+                <field name="name">Mulu Alemu</field>
+                <field name="email">mulu.alemu@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_chs-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_chs" model="hr.employee">
+                <field name="name">Mulu Alemu</field>
+                <field name="department_id" ref="hr.dep_rd"/>
+                <field name="parent_id" ref="hr.employee_fme"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4')])]"/>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-363-8229</field>
+                <field name="work_contact_id" ref="hr.work_contact_chs"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_chs-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_jgo" model="res.partner">
+                <field name="name">Fitsum Tesfaye</field>
+                <field name="email">fitsum.tesfaye@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jgo-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jgo" model="hr.employee">
+                <field name="name">Fitsum Tesfaye</field>
+                <field name="department_id" ref="hr.dep_ps"/>
+                <field name="parent_id" ref="hr.employee_vad"/>
+                <field name="job_id" ref="hr.job_consultant"/>
+                <field name="job_title">Consultant</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-555-518-8232</field>
+                <field name="work_contact_id" ref="hr.work_contact_jgo"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jgo-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_lur" model="res.partner">
+                <field name="name">Amanuel Teshome</field>
+                <field name="email">amanuel.teshome@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_lur-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_lur" model="hr.employee">
+                <field name="name">Amanuel Teshome</field>
+                <field name="department_id" ref="hr.dep_sales"/>
+                <field name="parent_id" ref="hr.employee_ngh"/>
+                <field name="job_id" ref="hr.job_marketing"/>
+                <field name="job_title">Marketing and Community Manager</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-911-169-135</field>
+                <field name="work_contact_id" ref="hr.work_contact_lur"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_lur-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            <record id="hr.work_contact_mit" model="res.partner">
+                <field name="name">Hiwot Mekonnen</field>
+                <field name="mobile">+251-911-672-318</field>
+                <field name="email">hiwot.mekonnen@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_mit-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_mit" model="hr.employee">
+                <field name="name">Hiwot Mekonnen</field>
+                <field name="department_id" ref="hr.dep_rd_be"/>
+                <field name="parent_id" ref="hr.employee_fme"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="category_ids" eval="[Command.set([ref('hr.employee_category_4')])]"/>
+                <field name="private_country_id" ref="base.et"/>
+                <field name="private_phone">+251-911-672-318</field>
+                <field name="private_email">hiwot.mekonnen@example.com</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-922-497-480</field>
+                <field name="work_contact_id" ref="hr.work_contact_mit"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_mit-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+
+            <record id="hr.work_contact_jep" model="res.partner">
+                <field name="name">Selamawit Kebede</field>
+                <field name="email">selamawit.kebede@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jep-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jep" model="hr.employee">
+                <field name="name">Selamawit Kebede</field>
+                <field name="department_id" ref="hr.dep_ps"/>
+                <field name="parent_id" ref="hr.employee_vad"/>
+                <field name="job_id" ref="hr.job_consultant"/>
+                <field name="job_title">Consultant</field>
+                <field name="private_country_id" ref="base.et"/>
+                <field name="private_email">selamawit.kebede@example.com</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-911-331-537</field>
+                <field name="work_contact_id" ref="hr.work_contact_jep"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jep-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+
+            <record id="hr.work_contact_jog" model="res.partner">
+                <field name="name">Saba Tadesse</field>
+                <field name="email">saba.tadesse@example.com</field>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jog-image.jpg"/>
+            </record>
+            
+            <record id="hr.employee_jog" model="hr.employee">
+                <field name="name">Saba Tadesse</field>
+                <field name="department_id" ref="hr.dep_rd"/>
+                <field name="parent_id" ref="hr.employee_jve"/>
+                <field name="job_id" ref="hr.job_developer"/>
+                <field name="job_title">Experienced Developer</field>
+                <field name="private_country_id" ref="base.et"/>
+                <field name="private_email">saba.tadesse@example.com</field>
+                <field name="work_location_id" ref="hr.work_location_1"/>
+                <field name="work_phone">+251-911-532-384</field>
+                <field name="work_contact_id" ref="hr.work_contact_jog"/>
+                <field name="image_1920" type="base64" file="hr/static/img/employee_jog-image.jpg"/>
+                <field name="create_date">2010-01-01 00:00:00</field>
+            </record>
+            
+            
+    <record id="hr.employee_admin" model="hr.employee">
+        <field name="private_street">Bole Road</field>
+        <field name="private_city">Addis Ababa</field>
+        <field name="private_zip">1000</field>
+        <field name="private_country_id" ref="base.et"/>
+        <field name="private_phone">+251 911 123456</field>
+        <field name="private_email">admin@ethiocompany.example.com</field>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 115 501234</field>
+        <field name="work_email">admin@ethiocompany.example.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4'), ref('hr.employee_category_3')])]"/>
+        <field name="job_id" ref="hr.job_ceo"/>
+        <field name="job_title">Chief Executive Officer</field>
+        <field name="department_id" ref="hr.dep_management"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+        <field name="name">Yohannes Assefa</field>
+    </record>
+
+    <record id="hr.work_contact_ngh" model="res.partner">
+        <field name="name">Mekdes Abebe</field>
+        <field name="email">mekdes.abebe@example.com</field>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_ngh-image.jpg"/>
+    </record>
+
+    <record id="hr.employee_ngh" model="hr.employee">
+        <field name="name">Mekdes Abebe</field>
+        <field name="department_id" ref="hr.dep_sales"/>
+        <field name="parent_id" ref="hr.employee_admin"/>
+        <field name="job_id" ref="hr.job_marketing"/>
+        <field name="job_title">Marketing and Community Manager</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4'), ref('hr.employee_category_2')])]"/>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 911 234567</field>
+        <field name="work_contact_id" ref="hr.work_contact_ngh"/>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_ngh-image.jpg"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+    </record>
+
+    <record id="hr.work_contact_qdp" model="res.partner">
+        <field name="name">Tewodros Kassahun</field>
+        <field name="email">tewodros.kassahun@example.com</field>
+    </record>
+
+    <record id="hr.employee_qdp" model="hr.employee">
+        <field name="name">Tewodros Kassahun</field>
+        <field name="user_id" ref="base.user_demo"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="parent_id" ref="hr.employee_admin"/>
+        <field name="private_street">Kirkos Subcity</field>
+        <field name="private_zip">1000</field>
+        <field name="private_city">Addis Ababa</field>
+        <field name="private_country_id" ref="base.et"/>
+        <field name="private_phone">+251 911 345678</field>
+        <field name="private_email">tewodros@ethiocompany.example.com</field>
+        <field name="job_id" ref="hr.job_developer"/>
+        <field name="job_title">Experienced Developer</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4')])]"/>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 115 502345</field>
+        <field name="work_contact_id" ref="hr.work_contact_qdp"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+    </record>
+
+    <record id="hr.work_contact_al" model="res.partner">
+        <field name="name">Selamawit Gebre</field>
+        <field name="email">selamawit.gebre@example.com</field>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_al-image.jpg"/>
+    </record>
+
+    <record id="hr.employee_al" model="hr.employee">
+        <field name="name">Selamawit Gebre</field>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="parent_id" ref="hr.employee_qdp"/>
+        <field name="job_id" ref="hr.job_cto"/>
+        <field name="job_title">Team Leader</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4'), ref('hr.employee_category_3')])]"/>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 911 456789</field>
+        <field name="work_contact_id" ref="hr.work_contact_al"/>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_al-image.jpg"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+    </record>
+
+    <record id="hr.work_contact_vad" model="res.partner">
+        <field name="name">Alemitu Tadesse</field>
+        <field name="email">alemitu.tadesse@example.com</field>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_vad-image.jpg"/>
+    </record>
+
+    <record id="hr.employee_vad" model="hr.employee">
+        <field name="name">Alemitu Tadesse</field>
+        <field name="department_id" ref="hr.dep_administration"/>
+        <field name="parent_id" ref="hr.employee_admin"/>
+        <field name="job_id" ref="hr.job_hrm"/>
+        <field name="job_title">Human Resources Manager</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4')])]"/>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 911 567890</field>
+        <field name="work_contact_id" ref="hr.work_contact_vad"/>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_vad-image.jpg"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+    </record>
+
+    <!-- More employees with Ethiopian names -->
+    <record id="hr.work_contact_hne" model="res.partner">
+        <field name="name">Bereket Assefa</field>
+        <field name="email">bereket.assefa@example.com</field>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_hne-image.jpg"/>
+    </record>
+
+    <record id="hr.employee_hne" model="hr.employee">
+        <field name="name">Bereket Assefa</field>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="parent_id" ref="hr.employee_ngh"/>
+        <field name="job_id" ref="hr.job_consultant"/>
+        <field name="job_title">Consultant</field>
+        <field name="private_country_id" ref="base.et"/>
+        <field name="private_email">bereket@ethiocompany.example.com</field>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 911 678901</field>
+        <field name="work_contact_id" ref="hr.work_contact_hne"/>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_hne-image.jpg"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+        <field name="marital">married</field>
+    </record>
+
+    <record id="hr.work_contact_fpi" model="res.partner">
+        <field name="name">Eyerusalem Tesfaye</field>
+        <field name="email">eyerusalem.tesfaye@example.com</field>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_fpi-image.jpg"/>
+    </record>
+
+    <record id="hr.employee_fpi" model="hr.employee">
+        <field name="name">Eyerusalem Tesfaye</field>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="parent_id" ref="hr.employee_ngh"/>
+        <field name="job_id" ref="hr.job_consultant"/>
+        <field name="job_title">Consultant</field>
+        <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4'), ref('hr.employee_category_5')])]"/>
+        <field name="private_country_id" ref="base.et"/>
+        <field name="private_email">eyerusalem@ethiocompany.example.com</field>
+        <field name="work_location_id" ref="hr.work_location_1"/>
+        <field name="work_phone">+251 911 789012</field>
+        <field name="work_contact_id" ref="hr.work_contact_fpi"/>
+        <field name="image_1920" type="base64" file="hr/static/img/employee_fpi-image.jpg"/>
+        <field name="create_date">2010-01-01 00:00:00</field>
+    </record>
+        </data>
+        </odoo>

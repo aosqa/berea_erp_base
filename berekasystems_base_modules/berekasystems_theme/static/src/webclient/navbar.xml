@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+  <t t-name="appsmenu" t-inherit="web.NavBar.AppsMenu" t-inherit-mode="extension">
+    <xpath expr="//Dropdown" position="replace">
+
+      <Dropdown hotkey="'h'" title="'Home Menu'" class="'fullwidth-dropdown'">
+        <t t-set-slot="toggler">
+          <i class="oi oi-apps" />
+        </t>
+        <div class="fullwidth-dropdown-menu">
+          <DropdownItem
+            t-foreach="apps"
+            t-as="app"
+            t-key="app.id"
+            class="{ 'o_app': true, focus: menuService.getCurrentApp() === app }"
+            href="getMenuItemHref(app)"
+            dataset="{ menuXmlid: app.xmlid, section: app.id }"
+            onSelected="() => this.onNavBarDropdownItemSelection(app)"
+          >
+          <div class="app-icon-container">
+            <t t-if="app.webIcon">
+              <img t-att-src="app.webIcon.replace(',', '/')" class="app-icon"/>
+            </t>
+            
+          </div>
+          <div class="app-name" t-esc="app.name"/>
+          </DropdownItem>
+        </div>
+      </Dropdown>
+
+    </xpath>
+  </t>
+</templates>

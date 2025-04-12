@@ -10,9 +10,19 @@
 
     "data":[
         "data/res_user_data.xml",
-        # "data/res_users_demo.xml",
         "data/res_partner_data.xml",
-        "data/mail_template_email_layout.xml"
+        "data/mail_template_email_layout.xml",
+        "data/ethiopiabank.xml",
+        "data/res_company_data.xml"
     ],
-    "demo": [],
+    "demo":[
+        "demo/res_users_demo.xml",
+        "demo/res_partner_image_demo.xml",
+        "demo/res_partner_demo.xml"
+      
+    ],
+        "installable": True,
+        "currency": "ETB",
+        "application": False,
+        "auto_install": True,
 }
