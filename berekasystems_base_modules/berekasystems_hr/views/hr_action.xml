@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="action_hr_dashboard" model="ir.actions.client">
+        <field name="name">hr Dashboard</field>
+        <field name="tag">berekasystems_hr.hr_dashboard</field>
+      </record>
+  
+      <!-- Top-level Menu Item -->
+      <menuitem name="HR Dashboard"
+                id="menu_hr_dashboard"
+                sequence="1"
+                action="action_hr_dashboard"
+                />
+    </data>
+    </odoo>

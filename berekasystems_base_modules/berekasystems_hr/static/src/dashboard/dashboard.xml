@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="berekasystems_hr.hr_Dashboard" owl="1">
+    <h2>Good To Go</h2>
+
+    <!-- Flex container with wrapping -->
+    <div class="d-flex flex-wrap gap-3" style="max-height: 600px; overflow-y: auto;">
+        <canvas style="width: 100%; height: 80%;"  t-ref="chart_one"/>
+        <canvas style="width: 100%; height: 80%;"  t-ref="chart_two"/>
+
+        <canvas style="width: 100%; height: 80%;"  t-ref="chart_three"/>
+
+      
+    </div>
+  </t>
+</templates>
